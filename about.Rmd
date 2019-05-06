@@ -1,0 +1,11 @@
+---
+title: "about"
+date: "8/15/2018"
+output: 
+  html_document:
+    theme: cerulean
+    code_folding: hide
+---
+This is just a dumb test website. You should move along!
+
+![](https://media.giphy.com/media/3o6ZtpzSCmlYjdsGlO/giphy.gif){width=550px}

@@ -1,0 +1,12 @@
+---
+title: "Photo shop queen"
+output: 
+  html_document:
+    theme: cerulean
+---
+When I should be doing other things I spend most of my time photoshopping nonsense! 
+
+![](13765859_1138718256186489_6967210482851278644_o.jpg)
+![](10945078_832317643493220_403502888254112508_o.jpg)
+
+![](Screen Shot 2018-08-15 at 10.50.11 PM.png)

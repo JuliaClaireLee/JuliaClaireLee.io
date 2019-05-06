@@ -1,0 +1,24 @@
+---
+title: "Blog Post 2"
+output: 
+  html_document:
+    theme: cerulean
+---
+I sent in my application for my absentee ballot for the midterm elections.^[https://votesaveamerica.com/] 
+
+
+Lawrence O'Donnell gave this beautiful monologue about progress on the eve of the infamous election of 2016 and it has stuck with me for the 21 months since. Brooklyn will win on Nov.6.2018. 
+
+<iframe src="http://player.theplatform.com/p/7wvmTC/MSNBCEmbeddedOffSite?guid=n_lw_fblock_161107" height="500" width="635" scrolling="no" border="no"></iframe> 
+
+
+
+As election day nears, we should all keep in mind that The world is wide enough for different political points of view. I disagree with the  unjust and ignorant racist opinions that the GOP hold but we can't stoop to the level of Trump and his fox news minions. They want us to believe that only their views can exist and everything else in fake news and rigged. This fall we will peacefully vote them out of power.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ1ZwqaXJaQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+Beto O'Rourke gave the most beautiful and honest answer about NFL players kneeling for racial justice. He is this generation's Bobby Kennedy^[https://www.irishcentral.com/news/politics/beto-orourke-bobby-kennedy]. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lAw9eXXVwfM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+

@@ -1,0 +1,69 @@
+---
+title: "Plots"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(tidyverse)
+library(babynames)
+library(ggplot2)
+library(extrafont)
+library(ggthemes)
+library(RColorBrewer)
+library(gridExtra)
+library(rmarkdown)
+```
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+guns_polls <- read_csv("guns-polls.csv")
+#making sure numeric variables are treated as numeric
+guns_polls$Republican<-as.integer(guns_polls$`Republican Support`)
+guns_polls$Democratic<-as.integer(guns_polls$`Democratic Support`)
+guns<- guns_polls%>%
+    filter(Question == "stricter-gun-laws") 
+
+
+ggplot(data = guns, aes(x = Democratic)) +
+   geom_point(aes(y = Republican, color = Pollster, shape = Population), size = 5) +
+  theme_solarized(light = FALSE) +
+  ggtitle("stricter gun laws")
+    
+```
+
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+Thanksgiving <- read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv") 
+  
+
+Thanksgiving_maindish <- data.frame(table(Thanksgiving$`What is typically the main dish at your Thanksgiving dinner?`)) %>%
+  filter(Freq > 5)
+
+p<-ggplot(data=Thanksgiving_maindish, aes(x=Var1, y=Freq)) +
+  geom_bar(stat="identity", fill = "Orange") +
+  theme_fivethirtyeight() +
+  ggtitle("Popular main dish")
+p
+```
+
+
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+cook<-Thanksgiving %>%
+  filter(`What is typically the main dish at your Thanksgiving dinner?`== "Turkey")
+  
+
+Turkey_method <- data.frame(table(cook$`How is the main dish typically cooked?`)) %>%
+  filter(Freq > 5)
+
+t<-ggplot(data=Turkey_method, aes(x=Var1, y=Freq)) +
+  geom_bar(stat="identity", fill = "Blue") +
+  theme_fivethirtyeight() +
+  ggtitle("How do you cook your turkey?")
+t
+```
+

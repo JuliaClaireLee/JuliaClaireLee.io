@@ -1,0 +1,29 @@
+name: "Awesome-website-try"
+navbar:
+  title: "My First Website"
+  left:
+    - text: "About"
+      href: about.html
+    - text: "Blog"
+      icon: fa-gear
+      menu:
+        - text: "8/19/18"
+          href: blog.html 
+        - text: "8/25/18"
+          href: Untitled.html 
+        - text: "9/02/18"
+          href: world.html 
+        - text: "9/14/18"
+          href: blog4.html
+    - text: "More"
+      icon: fa-gear
+      menu:
+        - text: "Maps"
+          href: maps.html
+        - text: "photoshop"
+          href: photoshop.html
+        - text: "Words"
+          href: Words,_Words,_Words.html
+        - text: "plots"
+          href: plots.html
+output_dir: "."
