@@ -30,6 +30,6 @@ I've also been reading alot of articles on fivethirtyeight and their model for t
 
 Here is the podcast of Nate Silver explaining the model^[https://fivethirtyeight.com/features/politics-podcast-lets-talk-about-the-2018-house-forecast/?ex_cid=navlink]: 
 
-<iframe frameborder="0" width="100%" height="180" style="margin:20px auto 25px;max-width:600px;" scrolling="no" src="https://fivethirtyeight.com/player/politics/24394034/"></iframe> 
+<iframe frameborder="0" width="100%" height="180" style="margin:20px auto 25px;max-width:600px;" scrolling="no" src="https://fivethirtyeight.com/player/politics/24394034/"></iframe>
 
 
