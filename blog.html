@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -86,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -247,27 +247,10 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
 
@@ -290,7 +273,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">My First Website</a>
+      <a class="navbar-brand" href="index.html">Lonely Student Blog</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -329,9 +312,6 @@ $(document).ready(function () {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="maps.html">Maps</a>
-    </li>
     <li>
       <a href="photoshop.html">photoshop</a>
     </li>
@@ -377,17 +357,17 @@ $(document).ready(function () {
 <p>I also have gotten really into listening to “Randor &amp; Lee.”</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EAORjS28btQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
-<p>My favorite song is their song “Here”<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+<p>My favorite song is their song “Here”<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
 <p>I’ve also been reading alot of articles on fivethirtyeight and their model for the House elections 2018 gives the Democrats a 3/4 chance of flipping the house.</p>
 <p>(<a href="https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/" class="uri">https://projects.fivethirtyeight.com/2018-midterm-election-forecast/house/</a>)</p>
-<p>Here is the podcast of Nate Silver explaining the model<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>:</p>
+<p>Here is the podcast of Nate Silver explaining the model<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>:</p>
 <iframe frameborder="0" width="100%" height="180" style="margin:20px auto 25px;max-width:600px;" scrolling="no" src="https://fivethirtyeight.com/player/politics/24394034/">
 </iframe>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="https://open.spotify.com/album/78NRQY6Yfi9Narn1b8kZAe" class="uri">https://open.spotify.com/album/78NRQY6Yfi9Narn1b8kZAe</a><a href="#fnref1">↩</a></p></li>
-<li id="fn2"><p><a href="https://fivethirtyeight.com/features/politics-podcast-lets-talk-about-the-2018-house-forecast/?ex_cid=navlink" class="uri">https://fivethirtyeight.com/features/politics-podcast-lets-talk-about-the-2018-house-forecast/?ex_cid=navlink</a><a href="#fnref2">↩</a></p></li>
+<li id="fn1"><p><a href="https://open.spotify.com/album/78NRQY6Yfi9Narn1b8kZAe" class="uri">https://open.spotify.com/album/78NRQY6Yfi9Narn1b8kZAe</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://fivethirtyeight.com/features/politics-podcast-lets-talk-about-the-2018-house-forecast/?ex_cid=navlink" class="uri">https://fivethirtyeight.com/features/politics-podcast-lets-talk-about-the-2018-house-forecast/?ex_cid=navlink</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
@@ -408,6 +388,28 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
