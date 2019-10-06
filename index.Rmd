@@ -4,7 +4,7 @@ output:
   html_document:
     theme: cerulean
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ![](https://media1.giphy.com/media/1dNLLlpEUbeD8peO4e/giphy.gif?cid=790b7611584224761899bda119f4520afbff979bbb0f00e5&rid=giphy.gif){width=250px}
 
 ![](https://media3.giphy.com/media/11fiAsa3QmtCQo/giphy.gif?cid=790b761155719203a0b855a31fe18183047487ca5058bc94&rid=giphy.gif){width=650px}
