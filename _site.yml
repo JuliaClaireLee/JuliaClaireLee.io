@@ -18,8 +18,6 @@ navbar:
     - text: "More"
       icon: fa-gear
       menu:
-        - text: "Maps"
-          href: maps.html
         - text: "photoshop"
           href: photoshop.html
         - text: "Words"

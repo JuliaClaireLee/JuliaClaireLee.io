@@ -23,7 +23,7 @@ library(tm)
 library(RCurl)
 ```
 
-# The Declaration Of Independence
+
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 pal <- brewer.pal(15, "Blues")
@@ -34,7 +34,6 @@ DeclarationofIndependence<-DeclarationofIndependence %>%
   tm_map(removeWords, stopwords("english")) %>%
   tm_map(removePunctuation) %>%
   tm_map(stripWhitespace)
-wordcloud(DeclarationofIndependence, max.words = Inf, random.order=FALSE, min.freq = 2, scale = c(4,0.00115), colors = pal)
 ```
 
 # The Odyssey
