@@ -1,6 +1,6 @@
 name: "Awesome-website-try"
 navbar:
-  title: "My First Website"
+  title: "Lonely Student Blog"
   left:
     - text: "About"
       href: about.html
