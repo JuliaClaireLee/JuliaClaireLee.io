@@ -9,3 +9,7 @@ output:
 This is just a dumb test website. You should move along!
 
 ![](https://media.giphy.com/media/3o6ZtpzSCmlYjdsGlO/giphy.gif){width=550px}
+
+![](https://media.giphy.com/media/mDMG4NkWKy0Rccb6Z8/giphy.gif){width=550px} 
+
+
