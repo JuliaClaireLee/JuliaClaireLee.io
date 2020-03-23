@@ -33,7 +33,7 @@ ggplot(data = guns, aes(x = Democratic)) +
   ggtitle("stricter gun laws")
     
 ```
-
+^[https://github.com/fivethirtyeight/data/blob/master/poll-quiz-guns/guns-polls.csv]
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 Thanksgiving <- read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv") 
@@ -66,4 +66,6 @@ t<-ggplot(data=Turkey_method, aes(x=Var1, y=Freq)) +
   ggtitle("How do you cook your turkey?")
 t
 ```
+^["https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv"]
 
+all data used to make these plots comes from fivethirtyeight^[https://data.fivethirtyeight.com]

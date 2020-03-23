@@ -32,7 +32,7 @@ Here are some fun maps that I made !!!!!
 
 #FIJI EARTHQUAKE MAP
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=FALSE,eval=FALSE}
 data("quakes")
 quakes<-quakes %>%
     na.omit() %>%
@@ -61,7 +61,7 @@ dbGetQuery("SELECT name, lat, lon, city
 	OR name LIKE '%International%'")
 ```
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=FALSE,eval=FALSE}
 
 qmap("Wichita, KS",zoom = 4, maptype = 'roadmap') +
   geom_point (aes(x = lon, y = lat), data = airports)
@@ -80,7 +80,7 @@ Airport_map
 ```
 
 
-```{r, message=FALSE, warning=FALSE, results='hide', echo=FALSE}
+```{r, message=FALSE, warning=FALSE, results='hide', echo=FALSE,eval=FALSE}
 db1<-dbConnect_scidb(dbname = "citibike")
 dbListTables(db1)
 station<-db1 %>%
@@ -91,7 +91,7 @@ dbGetQuery("SELECT *
 
 #CITIBIKE MAP
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,eval=FALSE}
 citibike<-leaflet() %>%
       addTiles(group = "Road") %>%
       addProviderTiles("Esri.WorldTopoMap", group = "Topography_lines")  %>%
@@ -104,7 +104,7 @@ citibike
 
 
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r, message=FALSE, warning=FALSE, echo=FALSE,eval=FALSE}
 citibike_station<-qmap("Roosevelt Island, NY",zoom = 12, maptype = 'roadmap') +
   geom_point (aes(x = lon, y = lat, color = num_stops), data = station) +
   geom_jitter() +

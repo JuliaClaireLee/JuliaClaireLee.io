@@ -1,0 +1,29 @@
+---
+title: "Résumé"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+#install.packages("DT")
+library(DT)
+
+```
+## experience
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+jobs <- read_csv("/Users/julialee/JuliaClaireLee.io/jobs.csv")
+j<-as.data.frame(jobs)
+datatable(j)
+```
+
+## Education
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+education <- read_csv("/Users/julialee/JuliaClaireLee.io/education.csv")
+ed<-as.data.frame(education)
+datatable(ed)
+```

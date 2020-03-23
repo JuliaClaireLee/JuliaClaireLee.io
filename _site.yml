@@ -1,11 +1,11 @@
 name: "Awesome-website-try"
 navbar:
-  title: "Lonely Student Blog"
+  title: "Julia Claire Lee"
   left:
     - text: "About"
       href: about.html
     - text: "Blog"
-      icon: fa-gear
+      icon: fa-battery-full
       menu:
         - text: "8/19/18"
           href: blog.html 
@@ -16,7 +16,12 @@ navbar:
         - text: "9/14/18"
           href: blog4.html
         - text: "10/05/19"
-          href: blog5.html          
+          href: blog5.html
+    - text: "Résumé"
+      icon: fa-rocket
+      menu:
+        - text: "Résumé"
+          href: resume.html
     - text: "More"
       icon: fa-gear
       menu:
@@ -26,4 +31,7 @@ navbar:
           href: Words,_Words,_Words.html
         - text: "plots"
           href: plots.html
+        - text: "Estimating Pi"
+          href: Shiny_app.html
+        
 output_dir: "."

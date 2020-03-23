@@ -1,14 +1,20 @@
 ---
-title: "about"
-date: "8/15/2018"
+title: "About"
 output: 
   html_document:
     theme: cerulean
     code_folding: hide
 ---
-This is just a dumb test website. You should move along!
+
+This is my dumb,professional,presonal,secret,public website. I was told  that I should have a professional website but am not a professional so this is what I made.^[please forgive all the misspellings and grammatical errors on this website... I am a dummy: https://www.youtube.com/watch?v=Ovi7uQbtKas]
 
 ![](https://media.giphy.com/media/3o6ZtpzSCmlYjdsGlO/giphy.gif){width=550px}
+
+### contact info:
+$\textbf{Email:}$ jlee1194@ucr.edu 
+
+$\textbf{Twitter:}$ @JuJu_FTW
+
 
 ![](https://media.giphy.com/media/mDMG4NkWKy0Rccb6Z8/giphy.gif){width=550px} 
 

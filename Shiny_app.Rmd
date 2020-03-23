@@ -1,0 +1,16 @@
+---
+output: 
+  html_document:
+    theme: cerulean
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Shiny app:
+
+I made this for a final project for Advanced Statistical computing (Stat 207) 
+
+
+<iframe src="https://julia-lee.shinyapps.io/Pi_app/" width="100%" height="400px"></iframe>
