@@ -28,7 +28,7 @@ navbar:
         - text: "photoshop"
           href: photoshop.html
         - text: "Words"
-          href: Words,_Words,_Words.html
+          href: Words.html
         - text: "plots"
           href: plots.html
         - text: "Estimating Pi"
