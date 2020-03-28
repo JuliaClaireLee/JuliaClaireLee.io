@@ -1,0 +1,286 @@
+---
+title: "Blog 7"
+output: 
+  html_document:
+    theme: cerulean
+---
+I recently installed the package rtweet^[https://cran.r-project.org/web/packages/rtweet/rtweet.pdf] so I could scrap tweets online and then I made some wordclouds out of them for fun. Here are some: 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(textdata)
+library(rtweet) 
+library(tidytext)
+library(ggpubr) 
+library(tidyverse)
+library(wordcloud)
+library(RColorBrewer)
+devtools::install_github("karthik/wesanderson")
+library("wesanderson")
+```
+
+# Tweet Clouds
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+# Download all recent tweets of account
+benlee<- get_timeline("@benleemusic", n=11098)
+# Look at the dataframe
+view(benlee)
+# We need to restructure lego as one-token-per-row format
+tidy_tweets <- benlee %>% # pipe data frame 
+    filter(is_retweet==FALSE)%>% # only include original tweets
+  select(status_id, 
+         text)%>% # select variables of interest
+  unnest_tokens(word, text) # splits column in one token per row format
+
+my_stop_words <- tibble( #construct a dataframe
+  word = c(
+    "https",
+    "t.co",
+    "rt",
+    "amp",
+    "rstats",
+    "gt"
+  ),
+  lexicon = "twitter"
+)
+# Connect stop words
+all_stop_words <- stop_words %>%
+  bind_rows(my_stop_words) # here we are connecting two data frames
+
+# Let's see if it worked
+view(all_stop_words)
+
+# Remove numbers
+no_numbers <- tidy_tweets %>%
+    filter(is.na(as.numeric(word)))
+no_stop_words <- no_numbers  %>%
+  anti_join(all_stop_words, by = "word")
+```
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+nrc <- get_sentiments("nrc") # get specific sentiment lexicons in a tidy format
+nrc_words <- no_stop_words %>%
+  inner_join(nrc, by="word")
+pie_words<- nrc_words %>%
+  group_by(sentiment) %>% # group by sentiment type
+  tally %>% # counts number of rows
+  arrange(desc(n)) # arrange sentiments in descending order based on frequency
+pie_words
+```
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+pal2 <- wes_palette("Zissou1",4)
+pie_words<-as.data.frame(pie_words)
+wordz<-nrc_words$word
+group <- nrc_words$sentiment
+basecolors <- rainbow(10)
+```
+## @BenLeemusic
+```{r, echo=FALSE, message=FALSE,warning=FALSE}
+# find position of group in list of groups, and select that matching color...
+colorlist <- basecolors[ match(group,unique(group)) ]
+wordcloud(wordz, max.words = Inf, scale = c(4.5,0.3913127975125),random.order=FALSE,rot.per=.15, colors=colorlist)
+```
+
+## @BarackObama
+
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+# Download all recent tweets of account
+obama<- get_timeline("@BarackObama", n=15898)
+# Look at the dataframe
+view(obama)
+# We need to restructure lego as one-token-per-row format
+tidy_tweets <- obama %>% # pipe data frame 
+    filter(is_retweet==FALSE)%>% # only include original tweets
+  select(status_id, 
+         text)%>% # select variables of interest
+  unnest_tokens(word, text) # splits column in one token per row format
+
+my_stop_words <- tibble( #construct a dataframe
+  word = c(
+    "https",
+    "t.co",
+    "rt",
+    "amp",
+    "rstats",
+    "gt"
+  ),
+  lexicon = "twitter"
+)
+# Connect stop words
+all_stop_words <- stop_words %>%
+  bind_rows(my_stop_words) # here we are connecting two data frames
+
+# Let's see if it worked
+view(all_stop_words)
+
+# Remove numbers
+no_numbers <- tidy_tweets %>%
+    filter(is.na(as.numeric(word)))
+no_stop_words <- no_numbers  %>%
+  anti_join(all_stop_words, by = "word")
+```
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+nrc <- get_sentiments("nrc") # get specific sentiment lexicons in a tidy format
+nrc_words <- no_stop_words %>%
+  inner_join(nrc, by="word")
+pie_words<- nrc_words %>%
+  group_by(sentiment) %>% # group by sentiment type
+  tally %>% # counts number of rows
+  arrange(desc(n)) # arrange sentiments in descending order based on frequency
+pie_words
+```
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+pal2 <- wes_palette("Zissou1",4)
+pie_words<-as.data.frame(pie_words)
+wordz<-nrc_words$word
+group <- nrc_words$sentiment
+basecolors <- rainbow(10)
+```
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+# find position of group in list of groups, and select that matching color...
+colorlist <- basecolors[ match(group,unique(group)) ]
+```
+
+```{r,echo=FALSE, message=FALSE,warning=FALSE}
+wordcloud(wordz, max.words = Inf, scale = c(4.5,0.3913127975125),random.order=FALSE,rot.per=.15, colors=colorlist)
+```
+
+## @BernieSanders
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+# Download all recent tweets of account
+obama<- get_timeline("@BernieSanders", n=18998)
+# Look at the dataframe
+view(obama)
+# We need to restructure lego as one-token-per-row format
+tidy_tweets <- obama %>% # pipe data frame 
+    filter(is_retweet==FALSE)%>% # only include original tweets
+  select(status_id, 
+         text)%>% # select variables of interest
+  unnest_tokens(word, text) # splits column in one token per row format
+
+my_stop_words <- tibble( #construct a dataframe
+  word = c(
+    "https",
+    "t.co",
+    "rt",
+    "amp",
+    "rstats",
+    "gt"
+  ),
+  lexicon = "twitter"
+)
+# Connect stop words
+all_stop_words <- stop_words %>%
+  bind_rows(my_stop_words) # here we are connecting two data frames
+
+# Let's see if it worked
+view(all_stop_words)
+
+# Remove numbers
+no_numbers <- tidy_tweets %>%
+    filter(is.na(as.numeric(word)))
+no_stop_words <- no_numbers  %>%
+  anti_join(all_stop_words, by = "word")
+```
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+nrc <- get_sentiments("nrc") # get specific sentiment lexicons in a tidy format
+nrc_words <- no_stop_words %>%
+  inner_join(nrc, by="word")
+pie_words<- nrc_words %>%
+  group_by(sentiment) %>% # group by sentiment type
+  tally %>% # counts number of rows
+  arrange(desc(n)) # arrange sentiments in descending order based on frequency
+pie_words
+```
+
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+pal2 <- wes_palette("Zissou1",4)
+pie_words<-as.data.frame(pie_words)
+wordz<-nrc_words$word
+group <- nrc_words$sentiment
+basecolors <- rainbow(10)
+```
+
+```{r,echo=FALSE, message=FALSE,warning=FALSE,}
+# find position of group in list of groups, and select that matching color...
+colorlist <- basecolors[ match(group,unique(group)) ]
+wordcloud(wordz, max.words = Inf, scale = c(4.5,0.1913127975125),random.order=FALSE,rot.per=.15, colors=colorlist)
+```
+
+
+
+
+
+
+
+
+
+
+## @juju_FTW
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+# Download all recent tweets of account
+obama<- get_timeline("@JuJu_FTW", n=898)
+# Look at the dataframe
+view(obama)
+# We need to restructure lego as one-token-per-row format
+tidy_tweets <- obama %>% # pipe data frame 
+    filter(is_retweet==FALSE)%>% # only include original tweets
+  select(status_id, 
+         text)%>% # select variables of interest
+  unnest_tokens(word, text) # splits column in one token per row format
+
+my_stop_words <- tibble( #construct a dataframe
+  word = c(
+    "https",
+    "t.co",
+    "rt",
+    "amp",
+    "rstats",
+    "gt"
+  ),
+  lexicon = "twitter"
+)
+# Connect stop words
+all_stop_words <- stop_words %>%
+  bind_rows(my_stop_words) # here we are connecting two data frames
+
+# Let's see if it worked
+view(all_stop_words)
+
+# Remove numbers
+no_numbers <- tidy_tweets %>%
+    filter(is.na(as.numeric(word)))
+no_stop_words <- no_numbers  %>%
+  anti_join(all_stop_words, by = "word")
+```
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+nrc <- get_sentiments("nrc") # get specific sentiment lexicons in a tidy format
+nrc_words <- no_stop_words %>%
+  inner_join(nrc, by="word")
+pie_words<- nrc_words %>%
+  group_by(sentiment) %>% # group by sentiment type
+  tally %>% # counts number of rows
+  arrange(desc(n)) # arrange sentiments in descending order based on frequency
+pie_words
+```
+
+
+```{r,results='hide',echo=FALSE, message=FALSE,warning=FALSE}
+pal2 <- wes_palette("Zissou1",4)
+pie_words<-as.data.frame(pie_words)
+wordz<-nrc_words$word
+group <- nrc_words$sentiment
+basecolors <- rainbow(10)
+```
+
+```{r,echo=FALSE, message=FALSE,warning=FALSE,}
+# find position of group in list of groups, and select that matching color...
+colorlist <- basecolors[ match(group,unique(group)) ]
+wordcloud(wordz, max.words = Inf, scale = c(4.5,0.3913127975125),random.order=FALSE,rot.per=.15, colors=colorlist)
+```
