@@ -4,6 +4,13 @@ output:
   html_document:
     theme: cerulean
 ---
+I found the shark cam^[monterey bay
+aquarium:https://www.montereybayaquarium.org/]! 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wNcwiMcbiWg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
 I recently installed the package rtweet^[https://cran.r-project.org/web/packages/rtweet/rtweet.pdf] so I could scrap tweets online and then I made some wordclouds out of them for fun. Here are some: 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
