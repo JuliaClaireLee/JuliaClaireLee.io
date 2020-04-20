@@ -5,7 +5,7 @@ output:
     theme: cerulean
 ---
 
-<center><iframe seamless="seamless" style="width: 100%; border: none; display: block; max-width: 420px; height: 360px;" src="https://getyarn.io/yarn-clip/embed/65153e9e-0e6f-4fda-ad7f-80e1d751b815?autoplay=false"> </iframe><center>
+<iframe seamless="seamless" style="width: 100%; border: none; display: block; max-width: 420px; height: 360px;" src="https://getyarn.io/yarn-clip/embed/65153e9e-0e6f-4fda-ad7f-80e1d751b815?autoplay=false"> </iframe>
 
 It's the end of week 5 of quarantine/physical distancing. It has been a long week but I'm so lucky that I don't need to leave my dwelling and I'm fine. I'm not unemployed, I have health insurance, and I'm young and healthy. For me the worst was that I spent 60 minutes waiting for my elderly professor figure out Zoom. I'm so privileged and lucky. Thank you to all our heroes who risk their lives everyday. 
 
