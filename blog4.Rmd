@@ -2,7 +2,7 @@
 title: "Blog Post 4"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
 This blog is just for me and I know that no person is ever going to read this. It feels good to pretend that there are other people out there. Hello, imaginary audience (or the FBI).
 

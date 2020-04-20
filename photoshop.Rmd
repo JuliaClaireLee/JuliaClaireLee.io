@@ -2,7 +2,7 @@
 title: "Photo shop queen"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
 When I should be doing other things I spend most of my time photoshopping nonsense! 
 

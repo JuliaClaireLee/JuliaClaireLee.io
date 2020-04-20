@@ -2,7 +2,7 @@
 title: "Words, Words, Words"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

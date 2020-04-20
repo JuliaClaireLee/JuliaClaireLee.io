@@ -2,7 +2,7 @@
 title: "Blog 7"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
 I found the shark cam and the best one is the sea otter cam^[monterey bay
 aquarium:https://www.montereybayaquarium.org/]!

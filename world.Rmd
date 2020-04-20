@@ -2,7 +2,7 @@
 title: "Blog Post 3"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
     
 ---
 

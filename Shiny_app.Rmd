@@ -1,7 +1,7 @@
 ---
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
 
 ```{r setup, include=FALSE}

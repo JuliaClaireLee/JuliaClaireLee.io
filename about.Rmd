@@ -2,7 +2,7 @@
 title: "About"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
     code_folding: hide
 ---
 
@@ -13,7 +13,7 @@ This is my dumb,professional,presonal,secret,public website. I was told  that I 
 ### contact info:
 $\textbf{Email:}$ jlee1194@ucr.edu 
 
-$\textbf{Twitter:}$ @JuJu_FTW
+$\textbf{Twitter:}$ @JuJu_FTW^[https://twitter.com/JuJu_FTW]
 
 
 ![](https://media.giphy.com/media/mDMG4NkWKy0Rccb6Z8/giphy.gif){width=550px} 

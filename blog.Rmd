@@ -2,7 +2,7 @@
 title:  "Blog Post 1"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
     code_folding: hide
 ---
 Two weeks left until I go back to school and I have to finish studying for the GRE Math subject test and that sucks ass. I feel like I spent a whole summer studying for 2 tests that mean nothing but also mean everything at the same time.

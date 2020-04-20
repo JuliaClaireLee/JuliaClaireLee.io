@@ -2,7 +2,7 @@
 title: "Hello."
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
 Hello World.
 

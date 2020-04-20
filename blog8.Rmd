@@ -2,7 +2,7 @@
 title: "Blog 8"
 output: 
   html_document:
-    theme: cerulean
+    theme: united
 ---
  ![](2weeks.png) 
 
