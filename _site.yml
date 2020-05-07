@@ -23,6 +23,8 @@ navbar:
           href: Untitledsssss.html
         - text: "04/19/20"
           href: blog8.html
+        - text: "05/03/20"
+          href: blog9.html
     - text: "Résumé"
       icon: fa-rocket
       menu:
