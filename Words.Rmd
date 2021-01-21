@@ -43,6 +43,7 @@ pal2 <- brewer.pal(8,"Dark2")
 odyssey_url<-"https://www.clear.rice.edu/comp200/resources/texts/odyssey.txt"
 odyssey_Raw<-RCurl::getURL(odyssey_url)
 odyssey<-VCorpus(VectorSource(odyssey_Raw)) 
+class(odyssey)
 odyssey<-odyssey %>%
   tm_map(removeWords, stopwords("english")) %>%
   tm_map(removePunctuation) %>%
@@ -55,7 +56,7 @@ wordcloud(odyssey, max.words = Inf, scale = c(4,0.00975125),random.order=FALSE,r
 
 ```{r, message=FALSE, warning=FALSE,echo=FALSE}
 pal3 <- brewer.pal(8,"Pastel1")
-Kennedy_url<-"https://www.clear.rice.edu/comp200/resources/texts/Kennedy%20Inaugural%20Address.txt"
+Kennedy_url<-"http://www.gutenberg.org/cache/epub/28001/pg28001.txt"
 Kennedy_Raw<-RCurl::getURL(Kennedy_url)
 Kennedy<-VCorpus(VectorSource(Kennedy_Raw)) 
 Kennedy<-Kennedy%>%
@@ -64,6 +65,9 @@ Kennedy<-Kennedy%>%
   tm_map(stripWhitespace)
 wordcloud(Kennedy, max.words = Inf, scale = c(7, 0.125), random.order=FALSE, rot.per=.15, colors =pal3)
 ```
+
+
+
 
 # Constitution
 
@@ -77,11 +81,25 @@ usconstitution<-usconstitution %>%
   tm_map(removePunctuation) %>%
   tm_map(stripWhitespace) %>%
   tm_map(removeNumbers)
+
+usconstitution
 wordcloud(usconstitution, max.words = Inf, scale = c(6,0.41),random.order=FALSE, rot.per=.15, colors =pal2, random.color = TRUE )
 ```
 
 
 
 
+```{r, message=FALSE, warning=FALSE,echo=FALSE}
+??RCurl
+pal3 <- brewer.pal(8,"Pastel1")
+getwd()
+bidenfile<- read_file_raw("/Users/julialee/JuliaClaireLee.io/biden.txt")
+biden <- VCorpus(VectorSource(bidenfile))
+biden<-biden%>%
+  tm_map(removeWords, stopwords("english")) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace)
 
+wordcloud(biden, max.words = Inf, scale = c(0,0.41),random.order=FALSE, rot.per=.15, colors =pal2, random.color = TRUE )
+```
 

@@ -25,6 +25,10 @@ navbar:
           href: blog8.html
         - text: "05/03/20"
           href: blog9.html
+        - text: "05/15/20"
+          href: blog10.html
+        - text: "05/16/20"
+          href: blog11.html
     - text: "Résumé"
       icon: fa-rocket
       menu:
@@ -41,5 +45,7 @@ navbar:
           href: plots.html
         - text: "Estimating Pi"
           href: Shiny_app.html
+        - text: "biden plain text"
+          href: biden.txt
         
 output_dir: "."
