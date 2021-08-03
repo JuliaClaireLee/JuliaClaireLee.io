@@ -25,11 +25,9 @@ navbar:
     - text: "More"
       icon: fa-gear
       menu:
-        - text: "photoshop"
-          href: photoshop.html
-        - text: "Words"
+        - text: "Word clouds"
           href: Words.html
-        - text: "plots"
+        - text: "fun plots"
           href: plots.html
 
         
