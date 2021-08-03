@@ -66,6 +66,48 @@ t<-ggplot(data=Turkey_method, aes(x=Var1, y=Freq)) +
   ggtitle("How do you cook your turkey?")
 t
 ```
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+d<-read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv")
+d<-as.data.frame(d)
+mod1<-lm(data = d,Appearances~Gender+Years.since.joining+Death1)
+```
+
+
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+ggplot(d, aes(x = Years.since.joining, y = Appearances, color = Death1,shape=Gender))+
+  geom_point()+
+  ggtitle("Avengers")
+```
+
+
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+ggplot(d, aes(x = interaction(Gender, Death1), y = Appearances, color = Death1, shape=Gender))+
+  geom_boxplot() +
+  theme_fivethirtyeight(base_size = 12, base_family = "sans")+
+  ggtitle("Avengers: Death x Gender")
+```
 ^["https://raw.githubusercontent.com/fivethirtyeight/data/master/thanksgiving-2015/thanksgiving-2015-poll-data.csv"]
 
-all data used to make these plots comes from fivethirtyeight^[https://data.fivethirtyeight.com]
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE}
+ggplot(d, aes(x = Death1, y = Appearances, 
+                    group = Gender, 
+                    linetype = Gender, 
+                    shape = Gender,
+                    color = Gender)) +
+  geom_jitter(height = 0, width = 0.03, alpha = .7) +
+  geom_smooth(method = "lm", se = 0)
+```
+
+using this data from fivethirtyeight^[https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv]
+
+^[https://fivethirtyeight.com/features/avengers-death-comics-age-of-ultron/]
+
+
+
+
+
+
