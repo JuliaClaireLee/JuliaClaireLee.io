@@ -8,7 +8,7 @@ navbar:
       icon: fa-gear
       menu:
         - text: "Non-Model Based Classification & Clustering"
-          href: _205_Ch15_Julia Lee.pdf
+          href: Julia Lee.pdf
         - text: "Predicting mental health outcomes"
           href: paper (1).pdf
         - text: "random forest comparison"
