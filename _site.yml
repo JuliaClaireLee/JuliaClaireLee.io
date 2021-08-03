@@ -4,31 +4,19 @@ navbar:
   left:
     - text: "About"
       href: about.html
-    - text: "Blog"
-      icon: fa-battery-full
+    - text: "Projects"
+      icon: fa-gear
       menu:
-        - text: "8/19/18"
-          href: blog.html 
-        - text: "8/25/18"
-          href: Untitled.html 
-        - text: "9/02/18"
-          href: world.html 
-        - text: "9/14/18"
-          href: blog4.html
-        - text: "10/05/19"
-          href: blog5.html
-        - text: "03/24/20"
-          href: blog6.html
-        - text: "04/10/20"
-          href: Untitledsssss.html
-        - text: "04/19/20"
-          href: blog8.html
-        - text: "05/03/20"
-          href: blog9.html
-        - text: "05/15/20"
-          href: blog10.html
-        - text: "05/16/20"
-          href: blog11.html
+        - text: "photoshop"
+          href: photoshop.html
+        - text: "Predicting mental health outcomes"
+          href: paper (1).pdf
+        - text: "random forest comparison"
+          href: random-forest.html
+        - text: "Estimating Pi"
+          href: Shiny_app.html
+        - text: "r naught calculator"
+          href: U.html
     - text: "Résumé"
       icon: fa-rocket
       menu:
@@ -43,9 +31,6 @@ navbar:
           href: Words.html
         - text: "plots"
           href: plots.html
-        - text: "Estimating Pi"
-          href: Shiny_app.html
-        - text: "biden plain text"
-          href: biden.txt
+
         
 output_dir: "."

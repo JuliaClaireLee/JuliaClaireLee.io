@@ -4,15 +4,14 @@ output:
   html_document:
     theme: united
 ---
-Hello World.
+
+
 
 ### contact info:
-$\textbf{Email:}$ jlee1194@ucr.edu 
+$\textbf{Email:}$ julialee64@gmail.com 
 
-$\textbf{Twitter:}$ @JuJu_FTW^[https://twitter.com/JuJu_FTW]
+$\textbf{Github:}$ https://github.com/JuliaClaireLee
 
-![](https://media1.giphy.com/media/1dNLLlpEUbeD8peO4e/giphy.gif?cid=790b7611584224761899bda119f4520afbff979bbb0f00e5&rid=giphy.gif){width=250px}
+$\textbf{Linkedin:}$ 
+https://www.linkedin.com/in/julia-lee-5201b0156/
 
-<iframe src="https://giphy.com/embed/L1VXD3bEo3Uelzk6EF" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/startrek-star-trek-the-next-generation-L1VXD3bEo3Uelzk6EF">via GIPHY</a></p>
-
-![](https://media3.giphy.com/media/11fiAsa3QmtCQo/giphy.gif?cid=790b761155719203a0b855a31fe18183047487ca5058bc94&rid=giphy.gif){width=650px}

@@ -7,6 +7,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
+library(devtools)
 library(readr)
 library(tidyverse)
 library(mdsr)
@@ -27,14 +28,60 @@ library(RCurl)
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 pal <- brewer.pal(15, "Blues")
-DeclarationofIndependence_url <-"http://www.constitution.org/usdeclar.txt"
+DeclarationofIndependence_url <-"https://www.clear.rice.edu/comp200/resources/texts/War%20and%20Peace.txt"
 DeclarationofIndependence_Raw<-RCurl::getURL(DeclarationofIndependence_url)
 DeclarationofIndependence<-VCorpus(VectorSource(DeclarationofIndependence_Raw)) 
 DeclarationofIndependence<-DeclarationofIndependence %>%
   tm_map(removeWords, stopwords("english")) %>%
   tm_map(removePunctuation) %>%
   tm_map(stripWhitespace)
+wordcloud(DeclarationofIndependence, max.words = Inf, scale = c(4,0.00975125),random.order=FALSE,rot.per=.15, colors =pal )
 ```
+
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+pal <- brewer.pal(15, "Blues")
+DeclarationofIndependence_url <-"https://www.clear.rice.edu/comp200/resources/texts/hamlet.txt"
+DeclarationofIndependence_Raw<-RCurl::getURL(DeclarationofIndependence_url)
+DeclarationofIndependence<-VCorpus(VectorSource(DeclarationofIndependence_Raw)) 
+DeclarationofIndependence<-DeclarationofIndependence %>%
+  tm_map(removeWords, stopwords("english")) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace)
+wordcloud(DeclarationofIndependence, max.words = Inf, scale = c(4.5,0.1975125),random.order=FALSE,rot.per=.15, colors =rainbow(n=70) )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+pal <- brewer.pal(15, "Blues")
+DeclarationofIndependence_url <-"file:///Users/julialee/JuliaClaireLee.io/ham.txt"
+DeclarationofIndependence_Raw<-RCurl::getURL(DeclarationofIndependence_url)
+DeclarationofIndependence<-VCorpus(VectorSource(DeclarationofIndependence_Raw)) 
+DeclarationofIndependence<-DeclarationofIndependence %>%
+  tm_map(removeWords, stopwords("SMART")) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace)
+wordcloud(DeclarationofIndependence, max.words = Inf, scale = c(4,0.00975125),random.order=FALSE,rot.per=.15, colors =pal2 )
+
+```
+
+
+
+
 
 # The Odyssey
 
@@ -45,25 +92,29 @@ odyssey_Raw<-RCurl::getURL(odyssey_url)
 odyssey<-VCorpus(VectorSource(odyssey_Raw)) 
 class(odyssey)
 odyssey<-odyssey %>%
-  tm_map(removeWords, stopwords("english")) %>%
+  tm_map(removeWords, stopwords("SMART")) %>%
   tm_map(removePunctuation) %>%
   tm_map(stripWhitespace)
 wordcloud(odyssey, max.words = Inf, scale = c(4,0.00975125),random.order=FALSE,rot.per=.15, colors =pal2 )
 ```
 
 
-# Kennedy Inaugural Address
+# biden Inaugural Address
 
 ```{r, message=FALSE, warning=FALSE,echo=FALSE}
-pal3 <- brewer.pal(8,"Pastel1")
-Kennedy_url<-"http://www.gutenberg.org/cache/epub/28001/pg28001.txt"
+inauguration_palette <- c("#5445b1", "#749dae", "#f3c483", "#5c1a33", "#cd3341","#f7dc6a")
+
+
+Kennedy_url<-""
 Kennedy_Raw<-RCurl::getURL(Kennedy_url)
 Kennedy<-VCorpus(VectorSource(Kennedy_Raw)) 
 Kennedy<-Kennedy%>%
   tm_map(removeWords, stopwords("english")) %>%
   tm_map(removePunctuation) %>%
   tm_map(stripWhitespace)
-wordcloud(Kennedy, max.words = Inf, scale = c(7, 0.125), random.order=FALSE, rot.per=.15, colors =pal3)
+
+
+wordcloud(Kennedy, max.words = Inf, scale = c(4,0.0050975125),random.order= F,rot.per=.25, colors =inauguration_palette  )
 ```
 
 
@@ -77,13 +128,13 @@ usconstitution_Raw<-RCurl::getURL(usconstitution_url)
 usconstitution<-VCorpus(VectorSource(usconstitution_Raw)) 
 
 usconstitution<-usconstitution %>%
-  tm_map(removeWords, stopwords("english")) %>%
+  tm_map(removeWords, stopwords("SMART")) %>%
   tm_map(removePunctuation) %>%
   tm_map(stripWhitespace) %>%
   tm_map(removeNumbers)
 
 usconstitution
-wordcloud(usconstitution, max.words = Inf, scale = c(6,0.41),random.order=FALSE, rot.per=.15, colors =pal2, random.color = TRUE )
+wordcloud(usconstitution, max.words = Inf, scale = c(4,0.41),random.order=FALSE, rot.per=.15, colors = inauguration_palette, random.color = F)
 ```
 
 

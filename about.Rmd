@@ -5,16 +5,26 @@ output:
     theme: united
 ---
 
-This is my dumb,professional,presonal,secret,public website. I was told  that I should have a professional website but am not a professional so this is what I made.^[please forgive all the misspellings and grammatical errors on this website... I am a dummy: https://www.youtube.com/watch?v=Ovi7uQbtKas]
+<font size="3">
 
-![](https://media.giphy.com/media/3o6ZtpzSCmlYjdsGlO/giphy.gif){width=550px}
+
+
+
+I am a trained Data Analyst and Data Scientist, with a BA in Statistical and Data Sciences and Mathematics, and two years of graduate school in Applied Statistics. Currently looking for paid and unpaid internships in Los Angeles, Seattle or to work remotely. </font> 
+
+<center> ![](194425086_4193246774066940_7270543670241906765_n copy.jpg){width=250px} </center>
 
 ### contact info:
-$\textbf{Email:}$ jlee1194@ucr.edu 
+$\textbf{Email:}$ julialee64@gmail.com 
 
-$\textbf{Twitter:}$ @JuJu_FTW^[https://twitter.com/JuJu_FTW]
+$\textbf{Github:}$ https://github.com/JuliaClaireLee
+
+$\textbf{Linkedin:}$ 
+https://www.linkedin.com/in/julia-lee-5201b0156/
 
 
-![](https://media.giphy.com/media/mDMG4NkWKy0Rccb6Z8/giphy.gif){width=550px} 
+
+
+
 
 
