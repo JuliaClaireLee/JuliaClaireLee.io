@@ -1,0 +1,28 @@
+---
+title: "Business Analytics"
+output: 
+  html_document:
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](Sheet 21.png)
+
+![](Sheet 2.png)
+
+![](Sheet 25.png)
+
+![](Sheet 18.png)
+
+![](SEA_PDX Markets.png)
+
+![](2020.png)
+
+![](k.png)
+
+![](h.png)
+
+![](j.png)

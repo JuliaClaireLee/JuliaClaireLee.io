@@ -19,18 +19,18 @@ navbar:
           href: Shiny_app.html
         - text: "r naught calculator"
           href: U.html
+    - text: "Work"
+      icon: fa-gear
+      menu:
+        - text: "business analytics"
+          href: lo.html
+        - text: "Infographics for PCJFA"
+          href: p.html
+          
     - text: "Résumé"
       icon: fa-rocket
       menu:
-        - text: "Résumé"
-          href: resume.html
-    - text: "More"
-      icon: fa-gear
-      menu:
-        - text: "Word clouds"
-          href: Words.html
-        - text: "fun plots"
-          href: plots.html
+        - text: "Resume"
+          href: resume.html      
 
-        
 output_dir: "."

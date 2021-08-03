@@ -1,0 +1,26 @@
+---
+title: "Pima County Justice For All"
+output: 
+  html_document:
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](Sheet 42.png)
+
+![](Sheet 44.png)
+
+![](Sheet 35.png)
+
+![](updated.png)
+
+![](Sheet 6.png)
+
+![](Sheet 17.png)
+
+![](Sheet 3.png)
+
+![](Sheet 17.png)
