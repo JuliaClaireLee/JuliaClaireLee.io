@@ -7,8 +7,8 @@ navbar:
     - text: "Projects"
       icon: fa-gear
       menu:
-        - text: "photoshop"
-          href: photoshop.html
+        - text: "Non-Model Based Classification & Clustering"
+          href: _205_Ch15_Julia Lee.pdf
         - text: "Predicting mental health outcomes"
           href: paper (1).pdf
         - text: "random forest comparison"
