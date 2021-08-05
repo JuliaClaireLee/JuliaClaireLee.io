@@ -369,13 +369,15 @@ $(document).ready(function () {
 <div id="introduction" class="section level1">
 <h1>Introduction:</h1>
 <p>I made this for a final project for Advanced Statistical computing (Stat 207)</p>
-<p>This app shows the many different ways we can estimate by using Statistical methods.</p>
+<p>This app shows the many different ways we can estimate <span class="math inline">\(\pi\)</span> by using Statistical methods.</p>
 <iframe src="https://julia-lee.shinyapps.io/Pi_app/" width="100%" height="400px">
 </iframe>
-<p>#Sampling from Uniform</p>
-<p>We know that the probability of any two integers being coprime is 6/pi^2 So we sample a pair of numbers from uniform distribution(we round the numbers in the pair to be an integer). So we have created a pseudo-random integer pairs.</p>
+</div>
+<div id="sampling-from-uniform" class="section level1">
+<h1>Sampling from Uniform</h1>
+<p>We know that the probability of any two integers being coprime is <span class="math inline">\(6/\pi^2\)</span> So we sample a pair of numbers from uniform distribution(we round the numbers in the pair to be an integer). So we have created a pseudo-random integer pairs.</p>
 <p>The see how many of those pairs of numbers had a GCD = 1. We then take that number and divided by total the number of observations (pairs), N.</p>
-<p>We then solve for pi by setting that result equal to 6/pi^2 = N So pi = (6/N)^0.5</p>
+<p>We then solve for pi by setting that result equal to <span class="math inline">\(6/\pi^2 = N\)</span> So <span class="math inline">\(pi = (6/N)^0.5\)</span></p>
 </div>
 <div id="normal-distribution" class="section level1">
 <h1>Normal Distribution</h1>
