@@ -27,7 +27,7 @@ So we sample a pair of numbers from uniform distribution(we round the numbers in
 The see how many of those pairs of numbers had a GCD = 1. We then take that number and divided by total the number of  observations (pairs), N. 
 
 We then solve for pi by setting that result equal to  $6/\pi^2 = N$
-So  $pi = (6/N)^{0.5}$
+So  $\pi = (6/N)^{0.5}$
 
 # Normal Distribution
 
