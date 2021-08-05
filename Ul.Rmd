@@ -1,0 +1,102 @@
+---
+title: "Soccer Power Index"
+output: 
+  html_document:
+    theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(randomForest)
+library(ISLR)
+library(tree)
+library(ggplot2) 
+library(dplyr) 
+library(tidyverse)
+library(mosaic)
+library(Stat2Data)
+library(MASS)
+library(reprtree)
+library(caret)
+library(rpart)
+#install.packages("ggdendro")
+library(rpart.plot)
+library(readr)
+library(cluster)
+library(factoextra)
+library(ape)
+library(ggdendro)
+library(dendextend)
+#install.packages('circlize') 
+library(circlize) 
+```
+
+
+```{r, echo=FALSE,results='hide',  message=FALSE}
+players <- read_csv("~/players_20.csv")
+global <- read_csv("global.csv")
+```
+
+```{r, echo=FALSE, message=FALSE}
+matches <- read_csv("matches .csv")
+matches <- matches %>%
+  mutate(spi_diff = spi1 - spi2) %>%
+  mutate(score_diff = score1 - score2) %>%
+filter(league=="Barclays Premier League")
+ggplot(data = matches, aes(x = spi_diff, y= score_diff)) +
+  geom_point() +
+  geom_smooth() + 
+  ggtitle("The Difference of Soccer Predictive Index in Predicting The Outcome of a Match") +
+  ylab("Score Difference") +
+  xlab ("SPI Difference")
+``` 
+
+
+
+
+```{r,echo=FALSE, message=FALSE, results='hide'}
+mod2 <- lm(score_diff ~ spi_diff, data = matches) 
+summary(mod2)
+```
+
+# Clustering Premier League Teams based on SPI, Off, Def scores 
+
+
+We want to know what teams in the Premier League team are alike. 
+Using FiveThirtyEight’s^[https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/] SPI, offensive, defensive ratings  to cluster Premier League teams. We can see that as expected that the big 6 teams are similar.
+
+
+
+
+```{r,echo=FALSE, message=FALSE, warning=FALSE}
+global <- read_csv("global.csv")
+global <- global %>%
+  filter(league=="Barclays Premier League") 
+global <- global[ -c(1:2)]
+
+dist_mat <- dist(global,method = "euclidean")
+hc1<-hclust(dist_mat, method =  "average")
+dend<-as.dendrogram(hc1)
+labels(dend) <- global$name
+labels(dend)
+dend1 <-dend
+
+dend1 <- dend1 %>%
+  color_branches(k=4) 
+dend1 <- set(dend1, "labels_cex", 0.5)  
+plot_horiz.dendrogram(dend1, side = TRUE)
+
+# circlize_dendrogram(dend, dend_track_height = 0.8) 
+dend <- dend %>%
+  color_branches(k=4) %>% 
+   color_labels
+colors = c("red", "blue", "green", "orange", "purple")
+clus4 = cutree(dend, 5)
+dend <- set(dend, "labels_cex", 0.25) 
+plot(as.phylo(dend), type =  "cladogram",tip.color = colors[clus4],label.offset = 1, cex = 0.85)
+```
+
+
+
+
+
