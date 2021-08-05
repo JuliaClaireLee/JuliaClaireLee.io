@@ -11,7 +11,7 @@
 
 
 
-<title>Shiny_app.utf8</title>
+<title>Pi Estimator</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -313,6 +313,9 @@ $(document).ready(function () {
     <li>
       <a href="U.html">r naught calculator</a>
     </li>
+    <li>
+      <a href="Ul.html">soccer Power index</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -358,15 +361,41 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Pi Estimator</h1>
 
 </div>
 
 
-<div id="shiny-app" class="section level2">
-<h2>Shiny app:</h2>
+<div id="introduction" class="section level1">
+<h1>Introduction:</h1>
 <p>I made this for a final project for Advanced Statistical computing (Stat 207)</p>
+<p>This app shows the many different ways we can estimate by using Statistical methods.</p>
 <iframe src="https://julia-lee.shinyapps.io/Pi_app/" width="100%" height="400px">
 </iframe>
+<p>#Sampling from Uniform</p>
+<p>We know that the probability of any two integers being coprime is 6/pi^2 So we sample a pair of numbers from uniform distribution(we round the numbers in the pair to be an integer). So we have created a pseudo-random integer pairs.</p>
+<p>The see how many of those pairs of numbers had a GCD = 1. We then take that number and divided by total the number of observations (pairs), N.</p>
+<p>We then solve for pi by setting that result equal to 6/pi^2 = N So pi = (6/N)^0.5</p>
+</div>
+<div id="normal-distribution" class="section level1">
+<h1>Normal Distribution</h1>
+<p>We can approximate pi by taking many samples a Normal Distribution N(0, pi) and taking the variances of those samples. And then taking the the mean of those variances to estimate pi.</p>
+</div>
+<div id="monte-carlo-integration" class="section level1">
+<h1>Monte carlo integration</h1>
+<p>We know that this integral equals pi:</p>
+<p><span class="math display">\[\int^0_1 -6 * (\pi/7)(x^2 - 3x) dx\]</span></p>
+<p>So we will use Monte carlo integration to approximate this integral.</p>
+<p>We sample N times from a unif(0,1) dist</p>
+<p>We then define the function you want to integrate h.x(x)</p>
+<p>We then find the average of the function mean(h.x(x))</p>
+<p>Then we divide by the length of the interval</p>
+</div>
+<div id="circle" class="section level1">
+<h1>circle</h1>
+<p>The ratio of an area circle and a square is: <span class="math display">\[\frac{\pi r^2}{4 r^2} = \frac{\pi}{4 }\]</span></p>
+<p>We randomly sample x and y from uniform <span class="math inline">\((-1,1)\)</span> If <span class="math inline">\(x^2 + y ^2 &lt;= 1\)</span> then the point is in the circle</p>
+<p>The ratio of points in the circle multiplied by 4 <span class="math inline">\(\approx \pi\)</span></p>
 </div>
 
 

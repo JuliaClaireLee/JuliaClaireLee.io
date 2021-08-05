@@ -19,6 +19,8 @@ navbar:
           href: Shiny_app.html
         - text: "r naught calculator"
           href: U.html
+        - text: "soccer Power index"
+          href: Ul.html
     - text: "Work"
       icon: fa-gear
       menu:
