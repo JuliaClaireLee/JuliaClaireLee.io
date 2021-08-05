@@ -33,7 +33,7 @@ So  $\pi = (6/N)^{0.5}$
 
 We can approximate pi by taking many samples  a Normal Distribution N(0, pi) and taking the variances of those samples. And then taking the the mean of those variances to estimate pi.
 
-# Monte carlo integration 
+# Monte Carlo Integration 
 
 We know that this integral equals pi:
 
@@ -50,7 +50,7 @@ We then find the average of the function mean(h.x(x))
 
 Then we divide by the length of the interval
 
-# circle
+# Circle
 
 The ratio of an area circle and a square  is: 
 $$\frac{\pi r^2}{4 r^2} = \frac{\pi}{4 }$$
