@@ -46,7 +46,7 @@ data  sourced from European Centre for Disease Prevention and Control (ECDC)^[ht
 
 ```{r,echo=FALSE,warning=FALSE,message=FALSE}
 options(scipen = 0)
-curve(2.65^(x),from = 0, to = 10, n = 10000,type="l",col="red",ylab="number of cases",main="COVID-19")
+curve(3^(x),from = 0, to = 10, n = 10000,type="l",col="red",ylab="number of cases",main="COVID-19")
 curve(2.1^(x),from = 0, to = 10, n = 10000,col="green",ylab="number of cases", main ="1918 H1N1 strain")
 curve(2^(x),from = 0, to = 10, n = 10000,col="blue",ylab="number of cases", main ="Ebola")
 curve(1.5^(x),from = 0, to = 10, n = 10000,col="dark green",ylab="number of cases",main="2009 H1N1 strain")
