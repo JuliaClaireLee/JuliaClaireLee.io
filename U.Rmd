@@ -32,7 +32,7 @@ us_deaths<-us_deaths %>%
 ggplot(data = us_deaths, aes(x=date,y=deaths))+
   geom_point(color ="blue") +
   geom_smooth(color="green") +
-  ggtitle("Total Number of U.S. Deaths of Covid-19 (as of March 23,2020)")
+  ggtitle("Total Number of U.S. Deaths of Covid-19 (as of March 23, 2020)")
 ```
 data  sourced from European Centre for Disease Prevention and Control (ECDC)^[https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide]
  (by way of "Our World in Data"^[https://ourworldindata.org/coronavirus-data])
