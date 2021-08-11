@@ -23,7 +23,7 @@ crc<-function(M,b,k){
 # Define UI for application that draws a histogram
 ui <- fluidPage(theme = shinytheme("united"),
                 # Application title
-                titlePanel("Capture-Recapture"),
+                titlePanel("Capture-Recapture: Lincoln–Petersen estimator"),
                 sidebarPanel(
                     numericInput("obs1", "size of first sample:", 1, min = 0),
                     numericInput("obs2", "size of second sample:", 1, min = 0),
