@@ -65,16 +65,21 @@ library(circlize)
 
 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
+
+de<-data.frame(c(2019,2020,2021), c(1023767,1262765,1357820))
+names(de) <- c("fiscal-year","total-us-backlog-immigration-court")
+data <- rbind(data, de)
+
 ggplot(data = data, aes(x=`fiscal-year`, y = `total-us-backlog-immigration-court`)) +
   geom_point(color = "green") +
   geom_smooth(color = "red") +
   geom_vline(xintercept  = 2003, color = "dark green", linetype="dotted") +
-  geom_vline(xintercept  = 2018) +
+  geom_vline(xintercept  = 2021) +
   ggtitle("Total Backlogged Cases in U.S. Immigration Courts") +
   theme_fivethirtyeight() +
-   annotate("text", x = 2000, y= 269600, label = "ICE was created in 2003", color = "blue") +
-   annotate("text", x = 2014.25, y= 754067, label = "As of 2018 there were 714067", color = "blue") +
-   annotate("text", x = 2014.25, y= 724067, label = "cases in the backlog", color = "blue") +
+   annotate("text", x = 2001, y= 369600, label = "ICE was created in 2003", color = "blue") +
+   annotate("text", x = 2016.25, y= 1357820, label = "As of 2021 there were 1.36 M", color = "blue") +
+   annotate("text", x = 2016.25, y= 1287820, label = "cases in the backlog", color = "blue") +
   ylab("Cases in U.S. Immigration Courts")
 ```
 
