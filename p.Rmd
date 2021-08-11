@@ -7,6 +7,11 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(ggplot2)
+library(tidyverse)
+library(ggthemes)
+data <- read_csv("data-KIK4y.csv")
 ```
 
 ![](Sheet 42.png)
@@ -29,6 +34,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ![](4.png)
 
 
-```{r}
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+ggplot(data = data, aes(x=`fiscal-year`, y = `total-us-backlog-immigration-court`)) +
+  geom_point(color = "green") +
+  geom_smooth(color = "red") +
+  geom_vline(xintercept  = 2003, color = "dark green", linetype="dotted") +
+  geom_vline(xintercept  = 2018) +
+  ggtitle("Total Backlogged Cases in U.S. Immigration Courts") +
+  theme_fivethirtyeight() +
+   annotate("text", x = 2000, y= 269600, label = "ICE was created in 2003", color = "blue") +
+   annotate("text", x = 2014.25, y= 754067, label = "As of 2018 there were 714067", color = "blue") +
+   annotate("text", x = 2014.25, y= 724067, label = "cases in the backlog", color = "blue") +
+  ylab("Cases in U.S. Immigration Courts")
 ```
 
