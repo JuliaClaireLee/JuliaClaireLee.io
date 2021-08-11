@@ -10,11 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 library(readr)
 library(ggplot2)
 library(tidyverse)
-install.packages("usmap")
+#install.packages("usmap")
 library(usmap)
 
 library(ggthemes)
 data <- read_csv("data-KIK4y.csv")
+Unauthorized_ <- read_csv("Unauthorized .csv")
 library(readr)
 library(leaflet)
 #install.packages("tidygeocoder")
@@ -92,8 +93,14 @@ ggplot(data = data, aes(x=`fiscal-year`, y = `total-us-backlog-immigration-court
 
 ![](AM.png)
 ![](info_demo.png)
-```{r}
-plot_usmap(data = statepop, values = "pop_2015", color = "red") + 
-  scale_fill_continuous(name = "Population (2015)", label = scales::comma) + 
-  theme(legend.position = "right")
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+statepop$State <- statepop$full
+k<-merge(statepop, Unauthorized_, by = "State" )
+state<-k%>%
+  mutate(prop=(`Number of Unauthorized Immigrants` / pop_2015)*100)
+plot_usmap(data = state, values = "prop", color = "green") + 
+  scale_fill_continuous(name = "%  undocumented", label = scales::comma) + 
+  scale_colour_brewer(palette="BuPu") +
+  theme(legend.position = "bottom") +
+  ggtitle("The % Of State Population That Is Undocumented")
 ```
