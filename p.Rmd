@@ -10,6 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 library(readr)
 library(ggplot2)
 library(tidyverse)
+install.packages("usmap")
+library(usmap)
+
 library(ggthemes)
 data <- read_csv("data-KIK4y.csv")
 library(readr)
@@ -89,3 +92,8 @@ ggplot(data = data, aes(x=`fiscal-year`, y = `total-us-backlog-immigration-court
 
 ![](AM.png)
 ![](info_demo.png)
+```{r}
+plot_usmap(data = statepop, values = "pop_2015", color = "red") + 
+  scale_fill_continuous(name = "Population (2015)", label = scales::comma) + 
+  theme(legend.position = "right")
+```
