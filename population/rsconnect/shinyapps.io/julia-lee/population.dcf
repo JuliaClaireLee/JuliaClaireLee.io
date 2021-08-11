@@ -1,0 +1,13 @@
+name: population
+title: population
+username:
+account: julia-lee
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4478837
+bundleId: 4910043
+url: https://julia-lee.shinyapps.io/population/
+when: 1628654228.4243
+lastSyncTime: 1628654228.42432
+asMultiple: FALSE
+asStatic: FALSE

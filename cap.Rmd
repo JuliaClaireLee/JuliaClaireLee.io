@@ -1,0 +1,25 @@
+---
+title: "Capture Recapture"
+html_document:
+  theme: united
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Capture recapture is an estimation technique for the unknown size of an  population.
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tyX79mPm2xY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+$$Sample 1 = m_1$$
+$$Sample 2 = m_2$$
+$$Recapture = b$$
+
+$$ \hat N = \frac{(m_2*m_1)}{b}$$
+
+
+
+<iframe src="https://julia-lee.shinyapps.io/population/" width="100%" height="400px"></iframe>
+
