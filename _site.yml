@@ -17,6 +17,8 @@ navbar:
           href: random-forest.html
         - text: "Estimating Pi"
           href: Shiny_app.html
+        - text: "Capture Recapture"
+          href: cap.html
         - text: "r naught calculator"
           href: U.html
         - text: "soccer Power index"
