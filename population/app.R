@@ -25,9 +25,9 @@ ui <- fluidPage(theme = shinytheme("united"),
                 # Application title
                 titlePanel("Capture-Recapture: Lincoln–Petersen estimator"),
                 sidebarPanel(
-                    numericInput("obs1", "size of first sample:", 1, min = 0),
-                    numericInput("obs2", "size of second sample:", 1, min = 0),
-                    numericInput("obs3", "number recaptured:", 1, min = 0)
+                    numericInput("obs1", "size of first sample:", 100, min = 0),
+                    numericInput("obs2", "size of second sample:", 200, min = 0),
+                    numericInput("obs3", "number recaptured:", 25, min = 0)
                 ),
                 
                 # Show a plot of the generated distribution
