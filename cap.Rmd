@@ -1,7 +1,8 @@
 ---
 title: "Capture Recapture"
-html_document:
-  theme: united
+output:
+  html_document:
+    theme: united
 ---
 
 ```{r setup, include=FALSE}

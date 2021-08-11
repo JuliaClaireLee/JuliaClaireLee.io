@@ -24,7 +24,7 @@ navbar:
         - text: "soccer Power index"
           href: Ul.html
     - text: "Work"
-      icon: fa-gear
+      icon: fa-bullseye
       menu:
         - text: "business analytics"
           href: lo.html
