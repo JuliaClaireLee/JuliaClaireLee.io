@@ -27,3 +27,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ![](infographic.png)
 
 ![](4.png)
+
+
+```{r}
+```
+
