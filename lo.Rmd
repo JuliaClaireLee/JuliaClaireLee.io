@@ -7,6 +7,19 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+uscitypopdensity <- read_csv("uscitypopdensity.csv")
+k<-read_csv("http://data.ctdata.org/dataset/68296d39-d0f7-4e2d-ba0e-98a3463ab58f/resource/c6760de4-bb0f-40b4-8336-f5b401130d6f/download/median-household-income-town-2019.csv")
+library(rpart.plot)
+library(readr)
+library(cluster)
+library(factoextra)
+library(ape)
+library(ggdendro)
+library(dendextend)
+#install.packages('circlize') 
+library(circlize)
 ```
 
 ![](Sheet 21.png)
@@ -26,3 +39,37 @@ knitr::opts_chunk$set(echo = TRUE)
 ![](h.png)
 
 ![](j.png)
+```{r,message=FALSE,warning=FALSE,echo=FALSE}
+k <- k %>%
+  filter(`Race/Ethnicity` == "All") %>%
+  filter(`Measure Type` == "Number") %>%
+  filter(Variable == "Median Household Income")%>%
+  group_by(Town) %>%
+  summarise(value=mean(Value))
+
+```
+
+```{r, message=FALSE,warning=FALSE,echo=FALSE}
+us<-uscitypopdensity %>%
+  filter(`2016 Population` >= 614664)
+dist_mat <- dist(us,method = "euclidean")
+hc1<-hclust(dist_mat, method =  "average")
+dend<-as.dendrogram(hc1)
+labels(dend) <- uscitypopdensity$City
+
+dend1 <-dend
+
+dend1 <- dend1 %>%
+  color_branches(k=9) 
+dend1 <- set(dend1, "labels_cex", 0.5)  
+plot_horiz.dendrogram(dend1, side = TRUE)
+
+# circlize_dendrogram(dend, dend_track_height = 0.8) 
+dend <- dend %>%
+  color_branches(k=4) %>% 
+   color_labels
+colors = c("red", "blue", "green", "orange", "purple", "black", "light blue")
+clus4 = cutree(dend, 7)
+dend <- set(dend, "labels_cex", 0.25) 
+plot(as.phylo(dend), type =  "cladogram",tip.color = colors[clus4],label.offset = 1, cex = 0.85)
+```
