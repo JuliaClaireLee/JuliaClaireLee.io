@@ -6,7 +6,7 @@ output:
 ---
 
 <font size="3">
-I am a trained Data Analyst and Data Scientist, with a BA in Statistical and Data Sciences and Mathematics, and two years of graduate school in Applied Statistics. Currently looking for rewarding work in Data Science where I can apply my skills and talents.
+I am a trained Data Analyst and Data Scientist, with a BA in Statistical and Data Sciences and Mathematics, and a Master's Degree in Statistics. Currently looking for rewarding work in Data Science where I can apply my skills and talents.
  </font> 
 
 <center> ![](194425086_4193246774066940_7270543670241906765_n copy.jpg){width=250px} </center>

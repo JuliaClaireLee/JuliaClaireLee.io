@@ -8,8 +8,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(readr)
-#install.packages("DT")
-library(DT)
 
 ```
 
@@ -25,11 +23,12 @@ https://www.linkedin.com/in/julia-lee-5201b0156/
 # EDUCATION
 
 #### Smith College, Northampton, MA
-B.A. 2019, Statistical and Data Sciences and Mathematics
-GPA: Overall - 3.56; Statistics major: 3.90 
+B.A. 2019, Statistical and Data Sciences and Mathematics\
+- GPA: Overall - 3.56 \
+- Statistics major: 3.90 \
 
 #### University of California, Riverside, Riverside, CA
-Ph.D. student, Applied Statistics, July 2019 - March 2021
+M.S. Statistics, July 2019 - December 2022
 
 # Relevant graduate coursework: 
 Statistical Computing, Advanced Statistical Computing, Discrete Data Analysis, Theory of Probability sequence , Regression, Anova, and Design sequence, Multivariate Analysis  
@@ -53,24 +52,55 @@ Longitudinal Project, “Predicting Mental Health Outcomes,” using three metho
 
 # WORK EXPERIENCE
 
-#### Pima County Justice for All, Tucson, AZ 
+#### Senior Statistician | UCLA Health
+June 2023 - December 2023 \
+ 
+- Conducted data wrangling and data transformation. \
 
-February 2021 – Present
+- Performed statistical analyses from both large and small samples of data. \ 
 
-Infographics and Data Analytics Associate
-Extract and analyze data for initiative campaign for immigrants’ right to counsel in immigration court proceedings. Created charts, graphs, maps and other visual aids to present on social media. (Volunteer)  
+- Perform the work of statistical programming in R
 
-#### University of California, Riverside, Statistics Department     
+####  Analyst, Data and Programming Intern | Pancreatic Cancer Action Network
+March - June 2023 \
 
-Sept. 2020 - March 2021
+- Paid internship with largest pancreatic cancer nonprofit that monitors treatment trials \
 
-Graduate teaching assistant. Taught R, a statistical computing language in computer science lab component of Statistics 100A and Statistics 100B. 
+- Track various aspects of clinical trials\
 
-#### Smith College Math Department	
+- Used machine learning techniques for enrollment prediction.
 
-September 2018 - May 2019
 
-Grader, Linear Algebra and Calculus II	           
+#### Data Science Intern | Loopie
+July 2021 - March 2022
+
+- Created a Shiny App to extract and organize data for the sales team. \
+
+- Perform other data assignments involving the analysis of consumer and other business data. \
+
+- Analyzed customer and revenue data to build data visualizations and infographics for quarterly reports
+
+
+#### Infographics and Data Analytics Associate | Pima County Justice for All, Tucson, AZ 
+
+February 2021 – March 2022\
+
+- Extracted and researched public data for use in a campaign to provide legal counsel to immigrants. \
+
+- Designed charts, graphs, maps and other visual aids to present on social media.
+
+
+#### Graduate Teaching Assistant |  University of California, Riverside, Statistics Department     
+
+Sept. 2020 - March 2021 \ 
+
+- Taught R, a statistical computing language in computer science lab component of Statistics 100A and Statistics 100B. 
+
+##### Student Grader | Smith College Math Department	
+
+September 2018 - May 2019 \
+
+- Linear Algebra and Calculus II	           
 
 
 ### REFERENCES FURNISHED UPON REQUEST

@@ -13,8 +13,8 @@
 
 <title>Résumé</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +143,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -172,8 +180,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -181,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -247,7 +248,7 @@ $(document).ready(function () {
   <a href="about.html">About</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-gear"></span>
      
     Projects
@@ -257,6 +258,9 @@ $(document).ready(function () {
   <ul class="dropdown-menu" role="menu">
     <li>
       <a href="Final_paper.pdf">Shiny weather dashboard</a>
+    </li>
+    <li>
+      <a href="JuliaLeeStat208Paper.pdf">NFL Classification Project</a>
     </li>
     <li>
       <a href="Julia Lee.pdf">Non-Model Based Classification &amp; Clustering</a>
@@ -282,7 +286,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-bullseye"></span>
      
     Work
@@ -299,7 +303,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="fa fa-rocket"></span>
      
     Résumé
@@ -331,54 +335,143 @@ $(document).ready(function () {
 
 <div id="contact-info" class="section level3">
 <h3>contact info:</h3>
-<p><span class="math inline">\(\textbf{Email:}\)</span> <a href="mailto:julialee64@gmail.com" class="email">julialee64@gmail.com</a></p>
-<p><span class="math inline">\(\textbf{Github:}\)</span> <a href="https://github.com/JuliaClaireLee" class="uri">https://github.com/JuliaClaireLee</a></p>
-<p><span class="math inline">\(\textbf{Linkedin:}\)</span> <a href="https://www.linkedin.com/in/julia-lee-5201b0156/" class="uri">https://www.linkedin.com/in/julia-lee-5201b0156/</a></p>
+<p><span class="math inline">\(\textbf{Email:}\)</span> <a
+href="mailto:julialee64@gmail.com"
+class="email">julialee64@gmail.com</a></p>
+<p><span class="math inline">\(\textbf{Github:}\)</span> <a
+href="https://github.com/JuliaClaireLee"
+class="uri">https://github.com/JuliaClaireLee</a></p>
+<p><span class="math inline">\(\textbf{Linkedin:}\)</span> <a
+href="https://www.linkedin.com/in/julia-lee-5201b0156/"
+class="uri">https://www.linkedin.com/in/julia-lee-5201b0156/</a></p>
 </div>
 <div id="education" class="section level1">
 <h1>EDUCATION</h1>
 <div id="smith-college-northampton-ma" class="section level4">
 <h4>Smith College, Northampton, MA</h4>
-<p>B.A. 2019, Statistical and Data Sciences and Mathematics GPA: Overall - 3.56; Statistics major: 3.90</p>
+<p>B.A. 2019, Statistical and Data Sciences and Mathematics<br />
+- GPA: Overall - 3.56<br />
+- Statistics major: 3.90<br />
+</p>
 </div>
-<div id="university-of-california-riverside-riverside-ca" class="section level4">
+<div id="university-of-california-riverside-riverside-ca"
+class="section level4">
 <h4>University of California, Riverside, Riverside, CA</h4>
-<p>Ph.D. student, Applied Statistics, July 2019 - March 2021</p>
+<p>M.S. Statistics, July 2019 - December 2022</p>
 </div>
 </div>
 <div id="relevant-graduate-coursework" class="section level1">
 <h1>Relevant graduate coursework:</h1>
-<p>Statistical Computing, Advanced Statistical Computing, Discrete Data Analysis, Theory of Probability sequence , Regression, Anova, and Design sequence, Multivariate Analysis</p>
+<p>Statistical Computing, Advanced Statistical Computing, Discrete Data
+Analysis, Theory of Probability sequence , Regression, Anova, and Design
+sequence, Multivariate Analysis</p>
 </div>
 <div id="relevant-undergraduate-coursework" class="section level1">
 <h1>Relevant undergraduate coursework:</h1>
-<p>Mathematical Statistics, Linear Algebra, Advanced Linear Algebra, Machine Learning, Research Design and Analysis, Multiple Regression, Probability, Communicating with Data, Intro to Computer Science, Intro to Data Science, Intro to Probability and Statistics, Statistical and Data Science Capstone Project</p>
+<p>Mathematical Statistics, Linear Algebra, Advanced Linear Algebra,
+Machine Learning, Research Design and Analysis, Multiple Regression,
+Probability, Communicating with Data, Intro to Computer Science, Intro
+to Data Science, Intro to Probability and Statistics, Statistical and
+Data Science Capstone Project</p>
 </div>
 <div id="skills" class="section level1">
 <h1>SKILLS</h1>
-<p>R (proficient) | SQL (proficient) | Tableau (proficient) Git (proficient) | Python (working knowledge) | CSS (working knowledge) HTML (working knowledge) |Java (basic skills)</p>
+<p>R (proficient) | SQL (proficient) | Tableau (proficient) Git
+(proficient) | Python (working knowledge) | CSS (working knowledge) HTML
+(working knowledge) |Java (basic skills)</p>
 </div>
 <div id="projects" class="section level1">
 <h1>PROJECTS</h1>
-<p>Project using R to build Shiny App to create an interactive dashboard to view real time weather data in a user-friendly format. The data came from MacLeish Field Station in Whately, MA, and also included historical data. In creating the dashboard, I created a new R package (“CEEDS”) that had functions to deal with weather data. (Senior Capstone project)</p>
-<p>Longitudinal Project, “Predicting Mental Health Outcomes,” using three methods–decision trees, logistic regression, and smoothing splines–to compare variables over time in order to study factors that predict future mental health in midlife.</p>
+<p>Project using R to build Shiny App to create an interactive dashboard
+to view real time weather data in a user-friendly format. The data came
+from MacLeish Field Station in Whately, MA, and also included historical
+data. In creating the dashboard, I created a new R package (“CEEDS”)
+that had functions to deal with weather data. (Senior Capstone
+project)</p>
+<p>Longitudinal Project, “Predicting Mental Health Outcomes,” using
+three methods–decision trees, logistic regression, and smoothing
+splines–to compare variables over time in order to study factors that
+predict future mental health in midlife.</p>
 </div>
 <div id="work-experience" class="section level1">
 <h1>WORK EXPERIENCE</h1>
-<div id="pima-county-justice-for-all-tucson-az" class="section level4">
-<h4>Pima County Justice for All, Tucson, AZ</h4>
-<p>February 2021 – Present</p>
-<p>Infographics and Data Analytics Associate Extract and analyze data for initiative campaign for immigrants’ right to counsel in immigration court proceedings. Created charts, graphs, maps and other visual aids to present on social media. (Volunteer)</p>
+<div id="senior-statistician-ucla-health" class="section level4">
+<h4>Senior Statistician | UCLA Health</h4>
+<p>June 2023 - December 2023<br />
+</p>
+<ul>
+<li><p>Conducted data wrangling and data transformation.<br />
+</p></li>
+<li><p>Performed statistical analyses from both large and small samples
+of data.  </p></li>
+<li><p>Perform the work of statistical programming in R</p></li>
+</ul>
 </div>
-<div id="university-of-california-riverside-statistics-department" class="section level4">
-<h4>University of California, Riverside, Statistics Department</h4>
-<p>Sept. 2020 - March 2021</p>
-<p>Graduate teaching assistant. Taught R, a statistical computing language in computer science lab component of Statistics 100A and Statistics 100B.</p>
+<div
+id="analyst-data-and-programming-intern-pancreatic-cancer-action-network"
+class="section level4">
+<h4>Analyst, Data and Programming Intern | Pancreatic Cancer Action
+Network</h4>
+<p>March - June 2023<br />
+</p>
+<ul>
+<li><p>Paid internship with largest pancreatic cancer nonprofit that
+monitors treatment trials<br />
+</p></li>
+<li><p>Track various aspects of clinical trials<br />
+</p></li>
+<li><p>Used machine learning techniques for enrollment
+prediction.</p></li>
+</ul>
 </div>
-<div id="smith-college-math-department" class="section level4">
-<h4>Smith College Math Department</h4>
-<p>September 2018 - May 2019</p>
-<p>Grader, Linear Algebra and Calculus II</p>
+<div id="data-science-intern-loopie" class="section level4">
+<h4>Data Science Intern | Loopie</h4>
+<p>July 2021 - March 2022</p>
+<ul>
+<li><p>Created a Shiny App to extract and organize data for the sales
+team.<br />
+</p></li>
+<li><p>Perform other data assignments involving the analysis of consumer
+and other business data.<br />
+</p></li>
+<li><p>Analyzed customer and revenue data to build data visualizations
+and infographics for quarterly reports</p></li>
+</ul>
+</div>
+<div
+id="infographics-and-data-analytics-associate-pima-county-justice-for-all-tucson-az"
+class="section level4">
+<h4>Infographics and Data Analytics Associate | Pima County Justice for
+All, Tucson, AZ</h4>
+<p>February 2021 – March 2022<br />
+</p>
+<ul>
+<li><p>Extracted and researched public data for use in a campaign to
+provide legal counsel to immigrants.<br />
+</p></li>
+<li><p>Designed charts, graphs, maps and other visual aids to present on
+social media.</p></li>
+</ul>
+</div>
+<div
+id="graduate-teaching-assistant-university-of-california-riverside-statistics-department"
+class="section level4">
+<h4>Graduate Teaching Assistant | University of California, Riverside,
+Statistics Department</h4>
+<p>Sept. 2020 - March 2021  </p>
+<ul>
+<li>Taught R, a statistical computing language in computer science lab
+component of Statistics 100A and Statistics 100B.</li>
+</ul>
+<div id="student-grader-smith-college-math-department"
+class="section level5">
+<h5>Student Grader | Smith College Math Department</h5>
+<p>September 2018 - May 2019<br />
+</p>
+<ul>
+<li>Linear Algebra and Calculus II</li>
+</ul>
+</div>
 </div>
 <div id="references-furnished-upon-request" class="section level3">
 <h3>REFERENCES FURNISHED UPON REQUEST</h3>

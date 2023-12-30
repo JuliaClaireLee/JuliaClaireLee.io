@@ -9,6 +9,8 @@ navbar:
       menu:
         - text: "Shiny weather dashboard"
           href: Final_paper.pdf
+        - text: "NFL Classification Project"
+          href: JuliaLeeStat208Paper.pdf
         - text: "Non-Model Based Classification & Clustering"
           href: Julia Lee.pdf
         - text: "Predicting mental health outcomes"
