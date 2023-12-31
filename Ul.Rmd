@@ -7,8 +7,11 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+#install.packages("ISLR")
+#install.packages("randomForest")
 library(randomForest)
 library(ISLR)
+#install.packages("tree")
 library(tree)
 library(ggplot2) 
 library(dplyr) 
@@ -16,7 +19,6 @@ library(tidyverse)
 library(mosaic)
 library(Stat2Data)
 library(MASS)
-library(reprtree)
 library(caret)
 library(rpart)
 #install.packages("ggdendro")
@@ -33,7 +35,7 @@ library(circlize)
 
 
 ```{r, echo=FALSE,results='hide',  message=FALSE}
-players <- read_csv("~/players_20.csv")
+#players <- read_csv("~/players_20.csv")
 global <- read_csv("global.csv")
 ```
 

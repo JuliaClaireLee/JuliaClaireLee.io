@@ -11,6 +11,8 @@ navbar:
           href: Final_paper.pdf
         - text: "NFL Classification Project"
           href: JuliaLeeStat208Paper.pdf
+        - text: "Bias In Machine Learning"
+          href: Bias_in_machine_learning.pdf
         - text: "Non-Model Based Classification & Clustering"
           href: Julia Lee.pdf
         - text: "Predicting mental health outcomes"
