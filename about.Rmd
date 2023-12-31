@@ -23,8 +23,9 @@ In addition to my technical skills, I specialize in business analytics, data vis
    margin: 5px;
   }
 </style>
+\
 
-### contact info:
+## contact info:
 $\textbf{Email:}$ julialee64@gmail.com 
 
 $\textbf{Github:}$ https://github.com/JuliaClaireLee
