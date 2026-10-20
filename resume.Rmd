@@ -38,7 +38,7 @@ Mathematical Statistics, Linear Algebra, Advanced Linear Algebra, Machine Learni
 
 # SKILLS
 
-R (proficient) | SQL (proficient)  | Tableau (proficient)
+R (proficient) | SQL (proficient)  | Tableau (proficient) | PowerBI (proficient) 
 Git (proficient) | Python (working knowledge) | CSS (working knowledge)
 HTML (working knowledge) |Java (basic skills)
 
@@ -51,15 +51,65 @@ Project using R to build Shiny App to create an interactive dashboard to view re
 Longitudinal Project, “Predicting Mental Health Outcomes,” using three methods--decision trees, logistic regression, and smoothing splines--to compare variables over time in order to study factors that predict future mental health in midlife. 
 
 # WORK EXPERIENCE
+#### AI Quality Assurance & Multi-Agent Systems Lead | ChatGPTree, Inc.\
+September 2026 - Present 
+
+- Lead QA for EcoRouter’s 225K+ line codebase, coordinating AI-powered testing agents and multi-agent workflows to validate feature releases.\
+- Performed over 300+ development commits.\ 
+- Run regression testing, staged rollouts, and deployment verification, catching critical bugs before production during rapid development cycles.\
+
+- Worked alongside product leadership and AI-assisted development workflows to translate QA findings into actionable improvements.\
+
+- Translate QA findings into prioritized fixes with product leadership and AI-assisted development workflows \
+
+- Supported staged roll outs, regression testing, and deployment verification to help maintain platform stability during rapid development.
+
+
+#### Data & Statistical Analysis Engineer (Statistician)| Saalex Solutions
+  September 2024 - November 2025 \
+ 
+- Conducted statistical analyses  and research using R and Python on complex datasets, applying regression, longitudinal analysis, ANOVA, and mixed-effects models. \
+
+- Built and maintained automated MS Power BI dashboards for project management metrics and financial data analysis. \
+
+- Developed algorithms, predictive analytics, or statistical models \
+- Conduct statistical analysis with a  research and development team. \
+- Supported quality assurance activities for ongoing data collection and analysis. \
+- Prepared statistical summaries, tables, and written documentation to support reporting and decision-making. \ 
+- Developed reproducible workflows and dashboards to support project and performance monitoring. \ 
+
+- Collaborated with multidisciplinary teams to ensure data accuracy, clarity, and compliance with project requirements. \
+
+- Wrote and developed data & statistical analysis protocols  \ 
+- Utilized lower-level computational programming languages (R, Python) \
+
+- Obtained secret level clearance \
+
+
+
+
+
 
 #### Senior Statistician | UCLA Health
 June 2023 - December 2023 \
- 
-- Conducted data wrangling and data transformation. \
 
-- Performed statistical analyses from both large and small samples of data. \ 
-
-- Perform the work of statistical programming in R
+  - Analyzed large & complex datasets. \
+  
+  - Worked in academic research environment. \
+  
+  - Provided statistical support for research studies. \ 
+  
+  - Performed data analysis in R, including regression, classification methods, mediation analysis, and multivariate techniques. \
+  
+  - Created tables, figures, and written summaries for scientific reports and manuscripts. \
+  
+  - Worked closely with investigators to interpret findings and support study objectives. \
+  
+  - Developed clean, well-documented, and reproducible analysis pipelines. \
+  
+  - Utilized the mixOmics package in R to carry out some analyses on microbiome data. \
+  
+  - Utilized computational statistical programming languages. \
 
 ####  Analyst, Data and Programming Intern | Pancreatic Cancer Action Network
 March - June 2023 \
